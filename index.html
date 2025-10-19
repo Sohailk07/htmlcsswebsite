@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WheelWise Auto Service - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>WheelWise Auto Service</h1>
+        <p>Your trusted partner for effortless car maintenance.</p>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Services <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="gallery.html">Service List</a>
+                    <a href="register.html">Book Online</a>
+                </div>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="qa.html">Q&A Forum</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="register.html" class="register-btn">Register/Book</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="placeholder-car-repair.jpg" alt="Car on Lift" style="width:100%">
+                <div class="text">Expert Diagnostics</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="placeholder-mechanic-working.jpg" alt="Mechanic working on engine" style="width:100%">
+                <div class="text">Certified Mechanics</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="placeholder-oil-change.jpg" alt="Oil change service" style="width:100%">
+                <div class="text">Quick & Affordable Service</div>
+            </div>
+        </section>
+
+        <section class="intro-section section">
+            <h2>Welcome to WheelWise</h2>
+            <p>We are revolutionizing the way you care for your vehicle. From routine maintenance to complex repairs, WheelWise offers professional, transparent, and convenient online booking for all your car service needs. Say goodbye to waiting rooms and hello to effortless maintenance.</p>
+            <div class="multimedia-component">
+                <h3>Our Location Map</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251025555198!2d-122.41941558468165!3d37.77492947975936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806440b8f413%3A0x6b29f0e1f3b0d2d3!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1633513361026!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="services-overview section">
+            <h2>Why Choose WheelWise?</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Online Booking</h3>
+                    <p>Schedule your service appointment 24/7 in just a few clicks.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Certified Experts</h3>
+                    <p>Our mechanics are factory-trained and use only genuine parts.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden costs. Get a clear quote before any work begins.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 WheelWise Auto Service. All rights reserved. | <a href="contact.html">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 4 seconds
+        }
+    </script>
+</body>
+</html>
